@@ -9,12 +9,12 @@ import io.cucumber.java.en.When;
 public class GetSalesforceTokenSteps {
 
     @Given("^I perform authentication for \"([^\"]*)\" with params$")
-    public void i_perform_authentication_for_something_with_params(String strArg1) throws Throwable {
+    public void i_perform_authentication_for_something_with_params(String sflogin, DataTable table) throws Throwable {
         throw new PendingException();
     }
 
     @Given("^I perform GET operation for \"([^\"]*)\"$")
-    public void i_perform_get_operation_for_something(String strArg1) throws Throwable {
+    public void i_perform_get_operation_for_something(String sfdev) throws Throwable {
         throw new PendingException();
     }
 
