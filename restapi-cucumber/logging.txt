@@ -1,0 +1,69 @@
+Request method:	GET
+Request URI:	https://nagsftest-dev-ed.my.salesforce.com/services/data/v37.0/sobjects/Account
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer 00D2v000001dWRS!ARoAQBpzO5bA.Zunur76acvluujDmS7plSF8zJtkaRQYpw8rGXrfYpZt9vJE9nvYPrdFxvnOcjfpudzpTKoqB419jZFV_8W3
+				Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Date: Thu, 23 Jan 2020 06:00:40 GMT
+Strict-Transport-Security: max-age=31536002; includeSubDomains
+Public-Key-Pins-Report-Only: pin-sha256="9n0izTnSRF+W4W4JTq51avSXkWhQB8duS2bxVLfzXsY="; pin-sha256="5kJvNEMw0KjrCAu7eXY5HZdvyCS13BbA0VJG1RSP91w="; pin-sha256="njN4rRG+22dNXAi+yb8e3UMypgzPUPHlv4+foULwl1g="; max-age=86400; includeSubDomains; report-uri="https://a.forcesslreports.com/hpkp-report/00D2v000001dWRSm";
+Expect-CT: max-age=86400, report-uri="https://a.forcesslreports.com/Expect-CT-report/00D2v000001dWRSm"
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+X-Robots-Tag: none
+Cache-Control: no-cache,must-revalidate,max-age=0,no-store,private
+Set-Cookie: BrowserId=rzU3wz2lEeqo1q-9Uk74Qw;Path=/;Domain=.salesforce.com;Expires=Mon, 23-Mar-2020 06:00:40 GMT;Max-Age=5184000
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Sforce-Limit-Info: api-usage=13/15000
+Content-Type: application/json;charset=UTF-8
+Vary: Accept-Encoding
+Content-Encoding: gzip
+Transfer-Encoding: chunked
+
+{
+    "objectDescribe": {
+        "activateable": false,
+        "createable": true,
+        "custom": false,
+        "customSetting": false,
+        "deletable": true,
+        "deprecatedAndHidden": false,
+        "feedEnabled": true,
+        "keyPrefix": "001",
+        "label": "Account",
+        "labelPlural": "Accounts",
+        "layoutable": true,
+        "mergeable": true,
+        "mruEnabled": true,
+        "name": "Account",
+        "queryable": true,
+        "replicateable": true,
+        "retrieveable": true,
+        "searchable": true,
+        "triggerable": true,
+        "undeletable": true,
+        "updateable": true,
+        "urls": {
+            "compactLayouts": "/services/data/v37.0/sobjects/Account/describe/compactLayouts",
+            "rowTemplate": "/services/data/v37.0/sobjects/Account/{ID}",
+            "approvalLayouts": "/services/data/v37.0/sobjects/Account/describe/approvalLayouts",
+            "defaultValues": "/services/data/v37.0/sobjects/Account/defaultValues?recordTypeId&fields",
+            "listviews": "/services/data/v37.0/sobjects/Account/listviews",
+            "describe": "/services/data/v37.0/sobjects/Account/describe",
+            "quickActions": "/services/data/v37.0/sobjects/Account/quickActions",
+            "layouts": "/services/data/v37.0/sobjects/Account/describe/layouts",
+            "sobject": "/services/data/v37.0/sobjects/Account"
+        }
+    },
+    "recentItems": [
+        
+    ]
+}
