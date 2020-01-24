@@ -3,7 +3,11 @@ package resources;
 public enum Resources {
 	
 	SalesforceLogin("/services/oauth2/token"),
-	SalesforceApp("/services/data/v37.0/sobjects/Account");
+	SalesforceApp("/services/data/v37.0/sobjects/Account"),
+	CreateUser("/public-api/users"),
+	GetUser("public-api/users"),
+	UpdateUser("public-api/users"),
+	DeleteUser("public-api/users");
 
 	private String resource;
 	
