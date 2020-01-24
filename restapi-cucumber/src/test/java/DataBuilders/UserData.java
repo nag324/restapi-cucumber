@@ -2,19 +2,25 @@ package DataBuilders;
 
 import java.util.ArrayList;
 import java.util.List;
-
+import java.util.concurrent.ThreadLocalRandom;
 import models.User;
 import models.Result;
 import models._meta;
 import models.RateLimit;
 
 public class UserData {
-    public Result createUserPayload(String first_name, String last_name, String gender, String email, String status) {
+
+  // public static Result addUser=null;
+  //  Result addUser = new Result()
+    public Result createUserPayload(String first_name, String last_name, String gender, String status) {
+
+        int randomNum = ThreadLocalRandom.current().nextInt(1, 10000 + 1);
         Result addUser = new Result();
-        addUser.setFirst_name(first_name);
+        addUser.setFirst_name(first_name+randomNum);
         addUser.setLast_name(last_name);
         addUser.setGender(gender);
-        addUser.setEmail(email);
+        addUser.setEmail(first_name+randomNum+"@gmail.com");
+        System.out.println(addUser.getEmail());
         addUser.setStatus(status);
 
         return addUser;

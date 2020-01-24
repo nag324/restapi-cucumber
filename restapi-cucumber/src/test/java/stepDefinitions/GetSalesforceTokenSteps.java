@@ -2,6 +2,7 @@ package stepDefinitions;
 
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 import java.io.IOException;
 
@@ -51,7 +52,14 @@ public class GetSalesforceTokenSteps {
         System.out.println(label);
         assertEquals(label, "Account");
     }
-	
+
+
+    @Then("verify url contains {string} key in the response")
+    public void verifyUrlContainsKeyInTheResponse(String actName) {
+        String name=Helpers.getJsonPath(response,"objectDescribe.urls");
+        System.out.println(name);
+        assertTrue(name.contains(actName));
+    }
 
        }
 

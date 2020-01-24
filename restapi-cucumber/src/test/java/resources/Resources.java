@@ -2,8 +2,6 @@ package resources;
 //enum is special class in java which has collection of constants or  methods
 public enum Resources {
 	
-	SalesforceLogin("/services/oauth2/token"),
-	SalesforceApp("/services/data/v37.0/sobjects/Account"),
 	CreateUser("/public-api/users"),
 	GetUser("public-api/users"),
 	UpdateUser("public-api/users"),
