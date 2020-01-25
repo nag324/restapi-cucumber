@@ -27,9 +27,10 @@ public class UserData {
 
     }
 
-    public Result updateUserPayload(String first_name) {
+
+    public Result updateUserPayload(String last_name) {
         Result updateUser = new Result();
-        updateUser.setFirst_name(first_name);
+        updateUser.setLast_name(last_name);
 
         return updateUser;
 

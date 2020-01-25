@@ -9,8 +9,6 @@ import java.io.IOException;
 import io.restassured.http.Header;
 import io.restassured.path.json.JsonPath;
 import org.junit.Test;
-
-import io.cucumber.java.PendingException;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.restassured.response.Response;

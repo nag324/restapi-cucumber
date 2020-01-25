@@ -4,8 +4,8 @@ public enum Resources {
 	
 	CreateUser("/public-api/users"),
 	GetUser("public-api/users"),
-	UpdateUser("public-api/users"),
-	DeleteUser("public-api/users");
+	UpdateUser("public-api/users/"),
+	DeleteUser("public-api/users/");
 
 	private String resource;
 	

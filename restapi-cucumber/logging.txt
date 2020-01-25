@@ -14,18 +14,18 @@ Body:
 {
     "website": null,
     "address": null,
-    "gender": "male",
+    "gender": "female",
     "phone": null,
     "dob": null,
-    "last_name": "Shyam",
+    "last_name": "Sam",
     "id": null,
-    "first_name": "Sai6196",
-    "email": "Sai6196@gmail.com",
-    "status": "active"
+    "first_name": "Super9086",
+    "email": "Super9086@gmail.com",
+    "status": "inactive"
 }
 HTTP/1.1 302 Moved Temporarily
 Server: nginx
-Date: Fri, 24 Jan 2020 11:09:00 GMT
+Date: Sat, 25 Jan 2020 04:28:29 GMT
 Content-Type: application/json; charset=UTF-8
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -33,8 +33,8 @@ Vary: Accept
 X-Rate-Limit-Limit: 60
 X-Rate-Limit-Remaining: 59
 X-Rate-Limit-Reset: 1
-Location: https://gorest.co.in/public-api/users/1707
-Set-Cookie: _csrf=fb3ea408719df0d70449869c678066d9c29478ccc057d9b21bdfbb00ac95be8ea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_BmiGhIeBLu4be_J6uxqXvvJsfHxxUTe%22%3B%7D; path=/; HttpOnly
+Location: https://gorest.co.in/public-api/users/1748
+Set-Cookie: _csrf=327f7411afd990397b3b7549b9818ef97bae3317d06a4165a854e5b7ed08ee47a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22kbqQsApYEcTMyV-HOtt25ijXLn_hPyz2%22%3B%7D; path=/; HttpOnly
 
 {
     "_meta": {
@@ -48,22 +48,22 @@ Set-Cookie: _csrf=fb3ea408719df0d70449869c678066d9c29478ccc057d9b21bdfbb00ac95be
         }
     },
     "result": {
-        "id": "1707",
-        "first_name": "Sai6196",
-        "last_name": "Shyam",
-        "gender": "male",
+        "id": "1748",
+        "first_name": "Super9086",
+        "last_name": "Sam",
+        "gender": "female",
         "dob": null,
-        "email": "Sai6196@gmail.com",
+        "email": "Super9086@gmail.com",
         "phone": null,
         "website": null,
         "address": null,
-        "status": "active",
+        "status": "inactive",
         "_links": {
             "self": {
-                "href": "https://gorest.co.in/public-api/users/1707"
+                "href": "https://gorest.co.in/public-api/users/1748"
             },
             "edit": {
-                "href": "https://gorest.co.in/public-api/users/1707"
+                "href": "https://gorest.co.in/public-api/users/1748"
             },
             "avatar": {
                 "href": null
@@ -72,10 +72,10 @@ Set-Cookie: _csrf=fb3ea408719df0d70449869c678066d9c29478ccc057d9b21bdfbb00ac95be
     }
 }
 Request method:	GET
-Request URI:	https://gorest.co.in/public-api/users?first_name=Sai6196
+Request URI:	https://gorest.co.in/public-api/users?first_name=Super9086
 Proxy:			<none>
 Request params:	<none>
-Query params:	first_name=Sai6196
+Query params:	first_name=Super9086
 Form params:	<none>
 Path params:	<none>
 Headers:		Authorization=Bearer _FWTKt73f0EeVrfWj7d3sKoLMnw_9dqVcs0k
@@ -87,18 +87,18 @@ Body:
 {
     "website": null,
     "address": null,
-    "gender": "male",
+    "gender": "female",
     "phone": null,
     "dob": null,
-    "last_name": "Shyam",
+    "last_name": "Sam",
     "id": null,
-    "first_name": "Sai6196",
-    "email": "Sai6196@gmail.com",
-    "status": "active"
+    "first_name": "Super9086",
+    "email": "Super9086@gmail.com",
+    "status": "inactive"
 }
 HTTP/1.1 200 OK
 Server: nginx
-Date: Fri, 24 Jan 2020 11:09:01 GMT
+Date: Sat, 25 Jan 2020 04:28:30 GMT
 Content-Type: application/json; charset=UTF-8
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -111,8 +111,8 @@ X-Pagination-Total-Count: 1
 X-Pagination-Page-Count: 1
 X-Pagination-Current-Page: 1
 X-Pagination-Per-Page: 20
-Link: <https://gorest.co.in/public-api/users?first_name=Sai6196&page=1>; rel=self
-Set-Cookie: _csrf=d53d87223f7d2a22e54f384ca80ba2d101f3752c2da35d047b6714e1a6fc1f44a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22uc00W1H6uAZGoQ76s938b5q_PZ_BPAiO%22%3B%7D; path=/; HttpOnly
+Link: <https://gorest.co.in/public-api/users?first_name=Super9086&page=1>; rel=self
+Set-Cookie: _csrf=bb86ee429dce1a50dde520cd89366ad00c01cdb4b1a3ce31b34d9927bada4b2da%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%223RrlOyp-I1z0H7WCQOf-Xvm47ApuM1aJ%22%3B%7D; path=/; HttpOnly
 Content-Encoding: gzip
 
 {
@@ -132,22 +132,22 @@ Content-Encoding: gzip
     },
     "result": [
         {
-            "id": "1707",
-            "first_name": "Sai6196",
-            "last_name": "Shyam",
-            "gender": "male",
+            "id": "1748",
+            "first_name": "Super9086",
+            "last_name": "Sam",
+            "gender": "female",
             "dob": null,
-            "email": "Sai6196@gmail.com",
+            "email": "Super9086@gmail.com",
             "phone": null,
             "website": null,
             "address": null,
-            "status": "active",
+            "status": "inactive",
             "_links": {
                 "self": {
-                    "href": "https://gorest.co.in/public-api/users/1707"
+                    "href": "https://gorest.co.in/public-api/users/1748"
                 },
                 "edit": {
-                    "href": "https://gorest.co.in/public-api/users/1707"
+                    "href": "https://gorest.co.in/public-api/users/1748"
                 },
                 "avatar": {
                     "href": null
@@ -155,4 +155,112 @@ Content-Encoding: gzip
             }
         }
     ]
+}
+Request method:	PUT
+Request URI:	https://gorest.co.in/public-api/users/1748?first_name=Super9086
+Proxy:			<none>
+Request params:	<none>
+Query params:	first_name=Super9086
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer _FWTKt73f0EeVrfWj7d3sKoLMnw_9dqVcs0k
+				Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "last_name": "Test"
+}
+HTTP/1.1 200 OK
+Server: nginx
+Date: Sat, 25 Jan 2020 04:28:30 GMT
+Content-Type: application/json; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+Vary: Accept
+X-Rate-Limit-Limit: 60
+X-Rate-Limit-Remaining: 58
+X-Rate-Limit-Reset: 2
+Set-Cookie: _csrf=c98adb6cd974cffa0eff45c49b54569eda831776483ffaf1de6a788f687e60f2a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22aYz6TGeCUkdge7ocrQoRebcQvFMdwvlz%22%3B%7D; path=/; HttpOnly
+Content-Encoding: gzip
+
+{
+    "_meta": {
+        "success": true,
+        "code": 200,
+        "message": "OK. Everything worked as expected.",
+        "rateLimit": {
+            "limit": 60,
+            "remaining": 58,
+            "reset": 2
+        }
+    },
+    "result": {
+        "id": "1748",
+        "first_name": "Super9086",
+        "last_name": "Test",
+        "gender": "female",
+        "dob": null,
+        "email": "Super9086@gmail.com",
+        "phone": null,
+        "website": null,
+        "address": null,
+        "status": "inactive",
+        "_links": {
+            "self": {
+                "href": "https://gorest.co.in/public-api/users/1748"
+            },
+            "edit": {
+                "href": "https://gorest.co.in/public-api/users/1748"
+            },
+            "avatar": {
+                "href": null
+            }
+        }
+    }
+}
+Request method:	DELETE
+Request URI:	https://gorest.co.in/public-api/users/1748?first_name=Super9086
+Proxy:			<none>
+Request params:	<none>
+Query params:	first_name=Super9086
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer _FWTKt73f0EeVrfWj7d3sKoLMnw_9dqVcs0k
+				Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "last_name": "Test"
+}
+HTTP/1.1 200 OK
+Server: nginx
+Date: Sat, 25 Jan 2020 04:28:31 GMT
+Content-Type: application/json; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+Vary: Accept
+X-Rate-Limit-Limit: 60
+X-Rate-Limit-Remaining: 58
+X-Rate-Limit-Reset: 2
+Set-Cookie: _csrf=9874d5f21e771ca8a3ac6e69a4693053aceb53460497ac2ec3739d9cc92614dca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22quRkejh-EEdoY3gnD5VyV5OUIQxezqHw%22%3B%7D; path=/; HttpOnly
+Content-Encoding: gzip
+
+{
+    "_meta": {
+        "success": true,
+        "code": 204,
+        "message": "The request was handled successfully and the response contains no body content.",
+        "rateLimit": {
+            "limit": 60,
+            "remaining": 58,
+            "reset": 2
+        }
+    },
+    "result": null
 }
