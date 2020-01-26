@@ -38,83 +38,52 @@ public class GoRestApiVerificationSteps {
 
     @Given("Create User Payload for {string} with {string} {string} {string} {string}")
     public void create_User_Payload_for_with(String url, String first_name, String last_name, String gender, String status) throws IOException {
-        //request1.given().spec(ApiExtensions.requestSpecification(url))
-
-        res=given().spec(ApiExtensions.requestSpecification(url))
+        /*res=given().spec(ApiExtensions.requestSpecification(url))
                    .header(new Header("Authorization", "Bearer " + token))
-                   .body(data.createUserPayload(first_name,last_name,gender,status));
+                   .body(data.createUserPayload(first_name,last_name,gender,status));*/
+
+       res =  ApiExtensions.RunApiWithHeaderToken(url,token)
+               .body(data.createUserPayload(first_name,last_name,gender,status));
     }
 
 
-/*    @When("user calls {string} with {string} http request")
-    public void user_calls_with_http_request(String path, String method) {
-
-        Resources apiPath = Resources.valueOf(path);
-        //String temp = res.get(firstName).toString();
-       // System.out.println(temp);
-        if(method.equalsIgnoreCase("POST"))
-            response =res.when().post(apiPath.getResource());
-           else if(method.equalsIgnoreCase("GET"))
-          //  firstName=response.getBody().jsonPath().get("result.first_name").toString();
-             response =res.when().get(apiPath.getResource());
-
-
-    }*/
 
     @When("^user perform \"([^\"]*)\" http request on \"([^\"]*)\"$")
     public void user_perform_something_http_request_on_something(String method, String path) throws Throwable {
         Resources apiPath = Resources.valueOf(path);
-        if(method.equalsIgnoreCase("POST"))
+
+      if(method.equalsIgnoreCase("POST"))
             response =res.when().post(apiPath.getResource());
         else if(method.equalsIgnoreCase("GET"))
             response =res.when().get(apiPath.getResource());
+
+      //ApiExtensions.ExecuteApiWithPathParams(method,actPath);
+
     }
 
 
     @Then("{string} in response body is {string}")
     public void in_response_body_is(String code, String value) {
-        //System.out.println(response);
         String statusCode=Helpers.getJsonPath(response,code);
         assertEquals(statusCode,value);
     }
 
- /*   @Then("verify user created maps to {string} using {string}")
-    public void verify_user_created_maps_to_using(String name, String path) throws IOException {
-        firstName=Helpers.getJsonPath(response,name);
-        System.out.println(firstName);
-        Resources apiPath = Resources.valueOf(path);
-        //user_calls_with_http_request(path,"GET");
-        response =res.queryParam("first_name",firstName).when().get(apiPath.getResource());
-        String actualName=Helpers.getJsonPath(response,name).toString();
-        System.out.println(actualName);
-        assertEquals(actualName.substring(1,actualName.length()-1),firstName);
-
-
-    }*/
 
 
     @Given("I perform {string} http request on {string}")
     public void i_perform_http_request_on(String method, String path) {
         Resources apiPath = Resources.valueOf(path);
-        System.out.println(apiPath);
         firstName=Helpers.getJsonPath(response,"result.first_name");
         if(method.equalsIgnoreCase("POST"))
             response =res.when().post(apiPath.getResource());
         else if(method.equalsIgnoreCase("GET"))
-            //  firstName=response.getBody().jsonPath().get("result.first_name").toString();
             response =res.when().queryParam("first_name",firstName).get(apiPath.getResource());
       }
 
     @Then("firstname in the user created above should match to {string}")
     public void firstname_in_the_user_created_above_should_match_to(String keyName) {
 
-      //  Result data = new Result();
-       // System.out.println(data.getFirst_name());
         firstName=Helpers.getJsonPath(response,keyName);
-        System.out.println(firstName);
-       // Resources apiPath = Resources.valueOf(path);
-       // user_calls_with_http_request(path,"GET");
-       // response =res.queryParam("first_name",firstName).when().get(apiPath.getResource());
         String actualName=Helpers.getJsonPath(response,keyName).toString();
         System.out.println(actualName);
         assertEquals(actualName,firstName);
@@ -128,18 +97,14 @@ public class GoRestApiVerificationSteps {
 
         Map<String, String> reqBody = new HashMap<>();
         reqBody.put("last_name", data);
-
-
         response =res.body(reqBody)
                      .when().put(apiPath.getResource()+id.substring(1,id.length()-1));
     }
 
-    @Then("user status should have lastest details")
-    public void user_status_should_have_lastest_details() {
+    @Then("user status should have latest details")
+    public void user_status_should_have_latest_details() {
 
-        System.out.println(response.asString());
        var actualVal = Helpers.getJsonPath(response,"result.last_name").toString();
-        System.out.println(actualVal);
        assertTrue(actualVal.contains("Test"));
     }
 
@@ -149,7 +114,6 @@ public class GoRestApiVerificationSteps {
     public void i_perform_something_request_on_user_with_something(String method, String path) throws Throwable {
         Resources apiPath = Resources.valueOf(path);
         var id = Helpers.getJsonPath(response,"result.id");
-        System.out.println("ID" +  id+ "is" +id.substring(1,id.length()-1));
         response =res.when().delete(apiPath.getResource()+id);
     }
 

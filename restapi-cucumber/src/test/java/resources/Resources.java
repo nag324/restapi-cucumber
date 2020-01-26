@@ -16,7 +16,7 @@ public enum Resources {
 	
 	public String getResource()
 	{
-		return resource;
+		return resource.toString();
 	}
 	
 

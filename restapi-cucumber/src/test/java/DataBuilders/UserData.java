@@ -10,8 +10,7 @@ import models.RateLimit;
 
 public class UserData {
 
-  // public static Result addUser=null;
-  //  Result addUser = new Result()
+
     public Result createUserPayload(String first_name, String last_name, String gender, String status) {
 
         int randomNum = ThreadLocalRandom.current().nextInt(1, 10000 + 1);
