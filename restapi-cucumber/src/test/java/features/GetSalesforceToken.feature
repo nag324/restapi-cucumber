@@ -1,3 +1,4 @@
+
 Feature: Get access token and verify the account object data in salesforce
 
 Scenario: Get the access token by passing client secret
@@ -8,3 +9,4 @@ Scenario: Get the access token by passing client secret
   Scenario: Verify the count of urls in account object
   Given I perform GET operation on Account object in "sandbox" environment
   Then verify url contains "sobject" key in the response
+

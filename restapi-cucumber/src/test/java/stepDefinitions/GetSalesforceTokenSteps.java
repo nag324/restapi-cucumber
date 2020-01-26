@@ -11,6 +11,7 @@ import io.restassured.path.json.JsonPath;
 import models.Result;
 import models.User;
 import org.junit.Test;
+
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.restassured.response.Response;
@@ -49,24 +50,23 @@ public class GetSalesforceTokenSteps {
     }
 
 
+
     @Then("verify url contains {string} key in the response")
     public void verifyUrlContainsKeyInTheResponse(String actName) {
         String name=Helpers.getJsonPath(response,"objectDescribe.urls");
         assertTrue(name.contains(actName));
     }
 
-/*    public String GetKeyFromModels(class<T> anyClass)
-    {
-        var key=null;
-
-        User builderKey = new User();
-        Result r = new Result();
 
 
-        return key;
-    }*/
 
-       }
+    @Then("verify url contains {string} key in the response")
+    public void verifyUrlContainsKeyInTheResponse(String actName) {
+        String name=Helpers.getJsonPath(response,"objectDescribe.urls");
+        System.out.println(name);
+        assertTrue(name.contains(actName));
+    }
+}
 
 
 
