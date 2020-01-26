@@ -1,69 +1,262 @@
-Request method:	GET
-Request URI:	https://nagsftest-dev-ed.my.salesforce.com/services/data/v37.0/sobjects/Account
+Request method:	POST
+Request URI:	https://gorest.co.in/public-api/users
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
 Form params:	<none>
 Path params:	<none>
-Headers:		Authorization=Bearer 00D2v000001dWRS!ARoAQBpzO5bA.Zunur76acvluujDmS7plSF8zJtkaRQYpw8rGXrfYpZt9vJE9nvYPrdFxvnOcjfpudzpTKoqB419jZFV_8W3
+Headers:		Authorization=Bearer _FWTKt73f0EeVrfWj7d3sKoLMnw_9dqVcs0k
 				Accept=*/*
 				Content-Type=application/json; charset=UTF-8
 Cookies:		<none>
 Multiparts:		<none>
-Body:			<none>
-HTTP/1.1 200 OK
-Date: Thu, 23 Jan 2020 09:02:50 GMT
-Strict-Transport-Security: max-age=31536002; includeSubDomains
-Public-Key-Pins-Report-Only: pin-sha256="9n0izTnSRF+W4W4JTq51avSXkWhQB8duS2bxVLfzXsY="; pin-sha256="5kJvNEMw0KjrCAu7eXY5HZdvyCS13BbA0VJG1RSP91w="; pin-sha256="njN4rRG+22dNXAi+yb8e3UMypgzPUPHlv4+foULwl1g="; max-age=86400; includeSubDomains; report-uri="https://a.forcesslreports.com/hpkp-report/00D2v000001dWRSm";
-Expect-CT: max-age=86400, report-uri="https://a.forcesslreports.com/Expect-CT-report/00D2v000001dWRSm"
-X-Content-Type-Options: nosniff
-X-XSS-Protection: 1; mode=block
-X-Robots-Tag: none
-Cache-Control: no-cache,must-revalidate,max-age=0,no-store,private
-Set-Cookie: BrowserId=IdLEOD2_Eeq1_RUj7ZI7qQ;Path=/;Domain=.salesforce.com;Expires=Mon, 23-Mar-2020 09:02:50 GMT;Max-Age=5184000
-Expires: Thu, 01 Jan 1970 00:00:00 GMT
-Sforce-Limit-Info: api-usage=16/15000
-Content-Type: application/json;charset=UTF-8
-Vary: Accept-Encoding
-Content-Encoding: gzip
+Body:
+{
+    "website": null,
+    "address": null,
+    "gender": "female",
+    "phone": null,
+    "dob": null,
+    "last_name": "Sam",
+    "id": null,
+    "first_name": "Super2057",
+    "email": "Super2057@gmail.com",
+    "status": "inactive"
+}
+HTTP/1.1 302 Moved Temporarily
+Server: nginx
+Date: Sun, 26 Jan 2020 08:29:35 GMT
+Content-Type: application/json; charset=UTF-8
 Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept
+X-Rate-Limit-Limit: 60
+X-Rate-Limit-Remaining: 59
+X-Rate-Limit-Reset: 1
+Location: https://gorest.co.in/public-api/users/2178
+Set-Cookie: _csrf=204ba55f1b9ba8688fd8eb6de14bb3f6f0c085fea95bbbb22e537a18b8dd9812a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22VGHhnH6oqUJgLuAHyFznWYUn2pIMbiV5%22%3B%7D; path=/; HttpOnly
 
 {
-    "objectDescribe": {
-        "activateable": false,
-        "createable": true,
-        "custom": false,
-        "customSetting": false,
-        "deletable": true,
-        "deprecatedAndHidden": false,
-        "feedEnabled": true,
-        "keyPrefix": "001",
-        "label": "Account",
-        "labelPlural": "Accounts",
-        "layoutable": true,
-        "mergeable": true,
-        "mruEnabled": true,
-        "name": "Account",
-        "queryable": true,
-        "replicateable": true,
-        "retrieveable": true,
-        "searchable": true,
-        "triggerable": true,
-        "undeletable": true,
-        "updateable": true,
-        "urls": {
-            "compactLayouts": "/services/data/v37.0/sobjects/Account/describe/compactLayouts",
-            "rowTemplate": "/services/data/v37.0/sobjects/Account/{ID}",
-            "approvalLayouts": "/services/data/v37.0/sobjects/Account/describe/approvalLayouts",
-            "defaultValues": "/services/data/v37.0/sobjects/Account/defaultValues?recordTypeId&fields",
-            "listviews": "/services/data/v37.0/sobjects/Account/listviews",
-            "describe": "/services/data/v37.0/sobjects/Account/describe",
-            "quickActions": "/services/data/v37.0/sobjects/Account/quickActions",
-            "layouts": "/services/data/v37.0/sobjects/Account/describe/layouts",
-            "sobject": "/services/data/v37.0/sobjects/Account"
+    "_meta": {
+        "success": true,
+        "code": 201,
+        "message": "A resource was successfully created in response to a POST request. The Location header contains the URL pointing to the newly created resource.",
+        "rateLimit": {
+            "limit": 60,
+            "remaining": 59,
+            "reset": 1
         }
     },
-    "recentItems": [
-        
+    "result": {
+        "id": "2178",
+        "first_name": "Super2057",
+        "last_name": "Sam",
+        "gender": "female",
+        "dob": null,
+        "email": "Super2057@gmail.com",
+        "phone": null,
+        "website": null,
+        "address": null,
+        "status": "inactive",
+        "_links": {
+            "self": {
+                "href": "https://gorest.co.in/public-api/users/2178"
+            },
+            "edit": {
+                "href": "https://gorest.co.in/public-api/users/2178"
+            },
+            "avatar": {
+                "href": null
+            }
+        }
+    }
+}
+Request method:	GET
+Request URI:	https://gorest.co.in/public-api/users?first_name=Super2057
+Proxy:			<none>
+Request params:	<none>
+Query params:	first_name=Super2057
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer _FWTKt73f0EeVrfWj7d3sKoLMnw_9dqVcs0k
+				Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "website": null,
+    "address": null,
+    "gender": "female",
+    "phone": null,
+    "dob": null,
+    "last_name": "Sam",
+    "id": null,
+    "first_name": "Super2057",
+    "email": "Super2057@gmail.com",
+    "status": "inactive"
+}
+HTTP/1.1 200 OK
+
+Vary: Accept-Encoding
+Vary: Accept
+X-Rate-Limit-Limit: 60
+X-Rate-Limit-Remaining: 59
+X-Rate-Limit-Reset: 1
+X-Pagination-Total-Count: 1
+X-Pagination-Page-Count: 1
+X-Pagination-Current-Page: 1
+X-Pagination-Per-Page: 20
+Link: <https://gorest.co.in/public-api/users?first_name=Super2057&page=1>; rel=self
+Set-Cookie: _csrf=51234b7db8a3017e2e8b02077040a9617a33c39f206dbb1fb589233f31a2038ea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%227kXwXWT1xApDQqIsAL-Lumw5K63YnDC4%22%3B%7D; path=/; HttpOnly
+Content-Encoding: gzip
+
+{
+    "_meta": {
+        "success": true,
+        "code": 200,
+        "message": "OK. Everything worked as expected.",
+        "totalCount": 1,
+        "pageCount": 1,
+        "currentPage": 1,
+        "perPage": 20,
+        "rateLimit": {
+            "limit": 60,
+            "remaining": 59,
+            "reset": 1
+        }
+    },
+    "result": [
+        {
+            "id": "2178",
+            "first_name": "Super2057",
+            "last_name": "Sam",
+            "gender": "female",
+            "dob": null,
+            "email": "Super2057@gmail.com",
+            "phone": null,
+            "website": null,
+            "address": null,
+            "status": "inactive",
+            "_links": {
+                "self": {
+                    "href": "https://gorest.co.in/public-api/users/2178"
+                },
+                "edit": {
+                    "href": "https://gorest.co.in/public-api/users/2178"
+                },
+                "avatar": {
+                    "href": null
+                }
+            }
+        }
     ]
+}
+Request method:	PUT
+Request URI:	https://gorest.co.in/public-api/users/2178?first_name=Super2057
+Proxy:			<none>
+Request params:	<none>
+Query params:	first_name=Super2057
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer _FWTKt73f0EeVrfWj7d3sKoLMnw_9dqVcs0k
+				Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "last_name": "Test"
+}
+HTTP/1.1 200 OK
+Server: nginx
+Date: Sun, 26 Jan 2020 08:29:37 GMT
+Content-Type: application/json; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+Vary: Accept
+X-Rate-Limit-Limit: 60
+X-Rate-Limit-Remaining: 59
+X-Rate-Limit-Reset: 1
+Set-Cookie: _csrf=293c922ee934c42378e5951c77fbff039af8c582345fc6be37eaaca8d4b6d599a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22AfM_4b8GCBVuHAcUqwFgaG66iqc73hOY%22%3B%7D; path=/; HttpOnly
+Content-Encoding: gzip
+
+{
+    "_meta": {
+        "success": true,
+        "code": 200,
+        "message": "OK. Everything worked as expected.",
+        "rateLimit": {
+            "limit": 60,
+            "remaining": 59,
+            "reset": 1
+        }
+    },
+    "result": {
+        "id": "2178",
+        "first_name": "Super2057",
+        "last_name": "Test",
+        "gender": "female",
+        "dob": null,
+        "email": "Super2057@gmail.com",
+        "phone": null,
+        "website": null,
+        "address": null,
+        "status": "inactive",
+        "_links": {
+            "self": {
+                "href": "https://gorest.co.in/public-api/users/2178"
+            },
+            "edit": {
+                "href": "https://gorest.co.in/public-api/users/2178"
+            },
+            "avatar": {
+                "href": null
+            }
+        }
+    }
+}
+Request method:	DELETE
+Request URI:	https://gorest.co.in/public-api/users/2178?first_name=Super2057
+Proxy:			<none>
+Request params:	<none>
+Query params:	first_name=Super2057
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer _FWTKt73f0EeVrfWj7d3sKoLMnw_9dqVcs0k
+				Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "last_name": "Test"
+}
+HTTP/1.1 200 OK
+Server: nginx
+Date: Sun, 26 Jan 2020 08:29:38 GMT
+Content-Type: application/json; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+Vary: Accept
+X-Rate-Limit-Limit: 60
+X-Rate-Limit-Remaining: 59
+X-Rate-Limit-Reset: 1
+Set-Cookie: _csrf=b55ecc580b49e71dae24ecb79a0eb8c3143500b0b9ee5eb2e7d21ed54fd1c872a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22P-8gwl9vxARiQJSwitobZtOItwR1mHRu%22%3B%7D; path=/; HttpOnly
+Content-Encoding: gzip
+
+{
+    "_meta": {
+        "success": true,
+        "code": 204,
+        "message": "The request was handled successfully and the response contains no body content.",
+        "rateLimit": {
+            "limit": 60,
+            "remaining": 59,
+            "reset": 1
+        }
+    },
+    "result": null
 }

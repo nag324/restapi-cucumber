@@ -5,6 +5,7 @@ import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.filter.log.RequestLoggingFilter;
 import io.restassured.filter.log.ResponseLoggingFilter;
 import io.restassured.http.ContentType;
+import io.restassured.http.Header;
 import io.restassured.response.Response;
 import io.restassured.response.ResponseOptions;
 import io.restassured.specification.RequestSpecification;
@@ -14,11 +15,18 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
 
+import static io.restassured.RestAssured.given;
+
 public class ApiExtensions {
 	
-	//public static RequestSpecification request;
+
+	public static RequestSpecification request;
+	public static Response response;
+
+
 	
 	public static io.restassured.specification.RequestSpecification requestSpecification(String url) throws IOException
+
 	{
 		RequestSpecification request = null;
 		if (url.equals("salesforce")) {
@@ -54,11 +62,29 @@ public class ApiExtensions {
 				return request;
 			}
 		}
-			
-		
+
 	return request;
 		
 	}
+
+
+	public static RequestSpecification RunApiWithHeaderToken(String url, String token) throws IOException {
+		request=given().spec(requestSpecification(url))
+				.header(new Header("Authorization", "Bearer " + token));
+
+		return request;
+
+	}
+
+
+	/*public static Response ExecuteApiWithPathParams(String method, String path) throws IOException {
+		if(method.equalsIgnoreCase("POST"))
+			response =request.when().post(path);
+		else if(method.equalsIgnoreCase("GET"))
+			response =request.when().get(path);
+		return response;
+
+	}*/
 	
 
 }
