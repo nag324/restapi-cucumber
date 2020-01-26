@@ -1,3 +1,4 @@
+
 package utils;
 
 import io.restassured.RestAssured;
@@ -14,37 +15,41 @@ import utils.Config.Environments;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
+import java.util.Map;
 
 import static io.restassured.RestAssured.given;
 
 public class ApiExtensions {
 	
-
 	public static RequestSpecification request;
 	public static Response response;
 
 
-	
-	public static io.restassured.specification.RequestSpecification requestSpecification(String url) throws IOException
-
+	public static RequestSpecification requestSpecification(String url) throws IOException
 	{
 		RequestSpecification request = null;
-		if (url.equals("salesforce")) {
-			if (request == null) {
-				PrintStream log = new PrintStream(new FileOutputStream("logging.txt"));
-				request = new RequestSpecBuilder().setBaseUri(Environments.SalesforceLoginUrl)
-						.addQueryParam("grant_type", Environments.GrantType)
-						.addQueryParam("client_id", Environments.ClientId)
-						.addQueryParam("client_secret", Environments.ClientSecret)
-						.addQueryParam("username", Environments.UserName)
-						.addQueryParam("password", Environments.Password)
-						.addFilter(RequestLoggingFilter.logRequestTo(log))
-						.addFilter(ResponseLoggingFilter.logResponseTo(log))
-						.setContentType(ContentType.JSON).build();
-				return request;
-			}
-		} else if (url.equals("sandbox")) {
-			if (request == null) {
+		switch (url) 
+		{
+		case "salesforce":
+		    if( request==null)
+		     {
+		    	PrintStream log =new PrintStream(new FileOutputStream("logging.txt"));
+		    	request=new RequestSpecBuilder().setBaseUri(Environments.SalesforceLoginUrl)
+		    			  .addQueryParam("grant_type", Environments.GrantType)
+		    			  .addQueryParam("client_id", Environments.ClientId)
+		    			  .addQueryParam("client_secret", Environments.ClientSecret)
+		    			  .addQueryParam("username", Environments.UserName)
+		    			  .addQueryParam("password", Environments.Password)
+				          .addFilter(RequestLoggingFilter.logRequestTo(log))
+				          .addFilter(ResponseLoggingFilter.logResponseTo(log))
+				          .setContentType(ContentType.JSON).build();
+		    	return request;
+		     }
+
+		    	break;
+
+		case "sandbox":
+			if(request==null) {
 				PrintStream log = new PrintStream(new FileOutputStream("logging.txt"));
 				request = new RequestSpecBuilder().setBaseUri(Environments.SalesforceSandboxUrl)
 						.addFilter(RequestLoggingFilter.logRequestTo(log))
@@ -52,8 +57,11 @@ public class ApiExtensions {
 						.setContentType(ContentType.JSON).build();
 				return request;
 			}
-		} else {
-			if (request == null) {
+
+		    	break;
+
+		default:
+			if(request==null) {
 				PrintStream log = new PrintStream(new FileOutputStream("logging.txt"));
 				request = new RequestSpecBuilder().setBaseUri(Environments.BaseUrl)
 						.addFilter(RequestLoggingFilter.logRequestTo(log))
@@ -61,6 +69,8 @@ public class ApiExtensions {
 						.setContentType(ContentType.JSON).build();
 				return request;
 			}
+
+
 		}
 
 	return request;
@@ -88,3 +98,4 @@ public class ApiExtensions {
 	
 
 }
+
